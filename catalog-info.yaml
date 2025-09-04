@@ -1,0 +1,33 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: stratyl-backstage
+  description: Stratyl's Backstage configuration repository
+  annotations:
+    github.com/project-slug: Stratyl/backstage
+  tags:
+    - backstage
+    - infrastructure
+    - platform
+spec:
+  type: service
+  lifecycle: experimental
+  owner: platform-team
+  system: stratyl-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: stratyl-system
+  description: Stratyl infrastructure system
+spec:
+  owner: platform-team
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: platform-team
+  description: Platform engineering team
+spec:
+  type: team
+  children: []
